@@ -1,0 +1,3 @@
+{{- $isWork := promptBoolOnce . "work_machine" "Is this a WORK machine?" false -}}
+data:
+  work_machine: {{ $isWork }}
