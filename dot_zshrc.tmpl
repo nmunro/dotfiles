@@ -115,10 +115,11 @@ fpath=(/Users/nmunro/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-source /Users/nmunro/.config/op/plugins.sh
-#export GITHUB_CONTAINER_REGISTRY_ACCESS_TOKEN=$(op read "op://Employee/Elixir Github Container Registry Token/token")
-#export GITHUB_USER=$(op read "op://Employee/Elixir Github Container Registry Token/user")
 
+{{- if .work_machine }}
+# Work-specific 1Password configuration
+source /Users/nmunro/.config/op/plugins.sh
 export GITHUB_CONTAINER_REGISTRY_ACCESS_TOKEN=$(op read "op://Employee/Elixir GHCR RW Token/token")
 export GITHUB_USER=$(op read "op://Employee/Elixir GHCR RW Token/username")
+{{- end }}
 
