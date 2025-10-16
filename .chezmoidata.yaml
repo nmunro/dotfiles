@@ -1,7 +1,3 @@
-# Machine configuration data for chezmoi
-# Set this to true on work machines, false on personal machines
-work_machine: true  # This is the work machine
-
 # Alternative: you can also use hostname-based detection
 # work_hostnames:
 #   - "work-macbook"
