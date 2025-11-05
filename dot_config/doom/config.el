@@ -32,9 +32,9 @@
         lsp-pylsp-plugins-mypy-args '("--ignore-missing-imports")))  ; Example of adding extra mypy args
 
 ;; Load dir-locals from emacs_config if it exists
-;; (let ((alt-dir-locals (expand-file-name "emacs_config/.dir-locals.el" (projectile-project-root))))
-;;   (when (file-exists-p alt-dir-locals)
-;;     (load-file alt-dir-locals)))
+(let ((alt-dir-locals (expand-file-name "emacs_config/.dir-locals.el" (projectile-project-root))))
+  (when (file-exists-p alt-dir-locals)
+    (load-file alt-dir-locals)))
 
 (after! lsp-mode
   (setq lsp-disabled-clients '(pylsp-docker)))
