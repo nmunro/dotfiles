@@ -41,3 +41,12 @@
 
 ;; (use-package! json-mode
 ;;   :mode "\\.json\\'")
+
+(after! sly
+  ;; Start SBCL via Qlot by default
+  (setq inferior-lisp-program "qlot exec sbcl")
+
+  ;; (Optional) name multiple impls; pick with `M-x sly` then `C-u` for prompt
+  (setq sly-lisp-implementations
+        '((qlot-sbcl ("qlot" "exec" "sbcl"))
+          (qlot-ros  ("qlot" "exec" "ros" "-Q" "run")))))
