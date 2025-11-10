@@ -6,3 +6,8 @@
   (when (probe-file quicklisp-init)
     (load quicklisp-init)))
 
+#-ocicl
+(when (probe-file #P"/Users/nmunro/.local/share/ocicl/ocicl-runtime.lisp")
+  (load #P"/Users/nmunro/.local/share/ocicl/ocicl-runtime.lisp"))
+(asdf:initialize-source-registry
+  (list :source-registry (list :directory (uiop:getcwd)) :inherit-configuration))
