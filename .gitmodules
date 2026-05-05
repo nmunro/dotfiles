@@ -1,0 +1,6 @@
+[submodule "tmux/.config/tmux/plugins/tpm"]
+	path = tmux/.config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "doom/.config/doom"]
+	path = doom/.config/doom
+	url = git@github.com:nmunro/.doom.d.git
